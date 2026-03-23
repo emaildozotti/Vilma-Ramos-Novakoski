@@ -1,5 +1,7 @@
 import FadeIn from './FadeIn'
 
+const WA_LINK = 'https://wa.me/5512991611893?text=Oi%20Vilma%2C%20vim%20pelo%20site.%20Gostaria%20de%20agendar%20uma%20conversa%20inicial%20para%20entender%20se%20o%20Reprocessamento%20Emocional%20faz%20sentido%20para%20mim.'
+
 export default function Hero() {
   return (
     <>
@@ -7,10 +9,10 @@ export default function Hero() {
       <header className="hidden md:flex fixed top-0 left-0 right-0 z-50 items-center justify-between px-10 py-4 bg-dark/90 backdrop-blur-md">
         <span className="font-sub text-off-white text-lg italic tracking-wide">Vilma Ramos</span>
         <a
-          href="https://wa.me/5512991611893?text=Oi%20Vilma%2C%20vim%20pelo%20site.%20Gostaria%20de%20agendar%20uma%20conversa%20inicial%20para%20entender%20se%20o%20Reprocessamento%20Emocional%20faz%20sentido%20para%20mim."
+          href={WA_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-off-white/70 text-xs uppercase tracking-[0.15em] hover:text-accent transition-colors"
+          className="btn-shimmer text-xs"
         >
           Agendar conversa
         </a>
@@ -70,17 +72,19 @@ export default function Hero() {
 
             <FadeIn delay={0.30}>
               <p className="font-sub text-off-white/80 text-lg md:text-xl font-light leading-relaxed mb-10 max-w-md">
-                Existe um caminho entre carregar tudo sozinha e viver com leveza real
+                Existe um caminho entre carregar tudo sozinha e viver com leveza real.
               </p>
             </FadeIn>
 
             <FadeIn delay={0.45}>
-              <button
-                onClick={() => document.getElementById('dores')?.scrollIntoView({ behavior: 'smooth' })}
-                className="btn-shimmer bg-primary text-off-white font-sans font-medium text-sm uppercase tracking-[0.12em] rounded-sm hover:bg-primary-dark transition-all cursor-pointer self-start"
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-shimmer self-start"
               >
                 Quero entender como funciona
-              </button>
+              </a>
             </FadeIn>
           </div>
 
@@ -95,7 +99,7 @@ export default function Hero() {
               />
               {/* Bottom gradient */}
               <div
-                className="absolute inset-0 rounded-tl-3xl rounded-br-3xl"
+                className="absolute inset-0 rounded-tl-3xl rounded-br-3xl pointer-events-none"
                 style={{ background: 'linear-gradient(to top, #3D2F2A 0%, transparent 40%)' }}
                 aria-hidden="true"
               />
