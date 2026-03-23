@@ -35,6 +35,22 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--color-primary);
+  color: var(--color-off-white);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(181, 114, 122, 0.25);
+}
+.btn-shimmer:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
 }
 .btn-shimmer::after {
   content: '';
